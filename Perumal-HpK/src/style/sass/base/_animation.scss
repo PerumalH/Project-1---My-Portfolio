@@ -59,15 +59,15 @@
 
 @keyframes glowing-border {
   0% {
-    border-color: rgba(255, 255, 255, 0.1); /* Light grey */
+    border-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
   }
   50% {
-    border-color: rgba(128, 128, 128, 0.8); /* Medium grey */
+    border-color: rgba(128, 128, 128, 0.8);
     box-shadow: 0 0 1rem rgba(128, 128, 128, 0.5);
   }
   100% {
-    border-color: rgba(255, 255, 255, 0.1); /* Light grey */
+    border-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
   }
 }
@@ -81,5 +81,39 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    color: $color-white;
+    text-shadow: 0 0 10px $color-white;
+  }
+  50% {
+    color: $yellow-5;
+    text-shadow: 0 0 10px $yellow-5;
+  }
+  70% {
+    color: $peach-3;
+    text-shadow: 0 0 10px $peach-3;
+  }
+  100% {
+    color: $color-white;
+    text-shadow: 0 0 10px $color-white;
   }
 }
