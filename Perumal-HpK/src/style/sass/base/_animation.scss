@@ -1,0 +1,85 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glowing-border {
+  0% {
+    border-color: rgba(255, 255, 255, 0.1); /* Light grey */
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    border-color: rgba(128, 128, 128, 0.8); /* Medium grey */
+    box-shadow: 0 0 1rem rgba(128, 128, 128, 0.5);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.1); /* Light grey */
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes rotate-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

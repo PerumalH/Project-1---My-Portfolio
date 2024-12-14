@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // define whats 1 rem = 10px
+  font-size: 62.5%;
+}
+
+body {
+  // padding-top: 3.5rem;
+  background-color: $gray-Shade3;
+  box-sizing: border-box;
+}
