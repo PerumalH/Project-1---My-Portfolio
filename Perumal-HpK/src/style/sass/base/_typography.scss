@@ -1,9 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sankofa+Display&display=swap");
 
+@font-face {
+  font-family: "BarmoFont";
+  src: url("src/assets/font/Barmo.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ZigheadFont";
+  src: url("src/assets/font/Zighead.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Aero";
+  src: url("src/assets/font/Asterone-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AerioFont";
+  src: url("src/assets/font/AERION Regular.otf") format("opentype");
+}
+
 body {
-  font-family: "Montserrat", serif;
+  // font-family: "Montserrat", serif;
+  // font-family: "Times New Roman", Times, serif;
+  font-family: "BarmoFont";
   font-weight: 900;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: $blue-5;
+  letter-spacing: 2px;
+  color: $red-4;
 }

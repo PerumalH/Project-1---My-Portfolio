@@ -17,7 +17,7 @@
   &-img {
     width: 50rem;
     overflow: hidden;
-    animation: float 2.5s infinite ease-in;
+    animation: float 5s ease-in-out infinite;
   }
 }
 
@@ -25,45 +25,52 @@
   position: relative;
   width: 45rem;
   height: 20rem;
-  background-color: $black-1;
-  border-radius: 1rem;
-  color: $black-2;
+  // background-color: $black-1;
+  border-radius: 2rem;
+  color: $black-1;
   overflow: hidden;
-  border: 1px $blue-3 solid;
-  box-shadow: $blue-3 0px 5px 35px -10px;
+  // border: 1px $blue-3 solid;
+  // box-shadow: $blue-3 0px 5px 35px -10px;
 
   & p {
     position: absolute;
-    left: 65%;
+    left: 57.9%;
     text-align: center;
     text-transform: capitalize;
-    background-color: $color-white;
-    width: 12rem;
+    font-family: "BarmoFont";
+    letter-spacing: 2px;
+    width: 16rem;
     margin: 2rem;
-    font-style: italic;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+    border-radius: 0.5rem;
+    // font-style: italic;
     z-index: 1;
+    background-color: $black-1;
+    color: $color-white;
+    border: 1px $color-white solid;
+    // box-shadow: $color-white 0px 0px 50px -10px;
     // transform: rotate(-10deg);
   }
-  & h6 {
+
+  & &-me {
     position: absolute;
+    width: 30rem;
+    // font-style: italic;
+    font-family: "BarmoFont";
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    margin: 1rem;
     padding: 1rem;
-    font-size: larger;
-    border-radius: 1rem;
-    top: 25%;
-    left: 5%;
-    animation: flicker 3s infinite ease-in-out;
-  }
-  & h5 {
-    position: absolute;
-    background-color: $Summer-3;
-    padding: 1rem;
-    font-size: medium;
-    top: 55%;
-    left: 10%;
-    transform: rotate(-5deg) skew(5deg);
-    animation: moveInRight 3s ease-in;
+    border-radius: 0.5rem;
+    top: 35%;
+    background-color: $black-1;
+    color: $color-white;
+    border: 1px $color-white solid;
+
+    // animation: glowInOut 3s infinite ease-in-out;
+    & hr {
+      width: 2rem;
+      margin: 0 auto;
+    }
   }
 
   &-img {
@@ -73,30 +80,48 @@
     left: 38%;
   }
 }
+.Name {
+  position: absolute;
+  margin: 2rem;
+  top: 8%;
+}
+
+svg path {
+  fill: transparent;
+  stroke: $color-white;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: textanimation 5s ease-in-out 1 forwards;
+}
+
+.copy {
+  color: $gray-Shade5;
+  font-size: x-small;
+}
 
 .floating-symbols {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
 
   .symbol {
     position: absolute;
     font-size: 1.5rem;
     font-weight: bold;
-    color: $yellow-1;
+    color: $color-white;
     animation: float 3s ease-in-out infinite;
 
     &:nth-child(1) {
       top: 10%;
-      left: 5%;
+      left: 15%;
       animation-delay: 0s;
     }
 
     &:nth-child(2) {
-      top: 20%;
-      right: 10%;
+      top: 10%;
+      right: 20%;
       animation-delay: 1s;
     }
 
@@ -107,15 +132,20 @@
     }
 
     &:nth-child(4) {
-      bottom: 10%;
+      bottom: 15%;
       right: 20%;
       animation-delay: 3s;
     }
 
     &:nth-child(5) {
-      top: 30%;
-      left: 25%;
+      top: 45%;
+      left: 5%;
       animation-delay: 4s;
+    }
+    &:nth-child(6) {
+      top: 45%;
+      right: 5%;
+      animation-delay: 5s;
     }
   }
 }

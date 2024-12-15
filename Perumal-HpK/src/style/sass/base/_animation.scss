@@ -24,7 +24,7 @@
     transform: translateX(0);
   }
 }
-@keyframes moveInButton {
+@keyframes moveInup {
   0% {
     opacity: 0;
     transform: translateY(3rem);
@@ -115,5 +115,72 @@
   100% {
     color: $color-white;
     text-shadow: 0 0 10px $color-white;
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInX {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes textanimation {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: $color-white;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes glowInOut {
+  0% {
+    box-shadow: $color-white 0px 0px 40px -10px;
+  }
+
+  50% {
+    box-shadow: $color-white 0px 0px 40px -20px;
+  }
+
+  100% {
+    box-shadow: $color-white 0px 0px 40px -30px;
   }
 }
