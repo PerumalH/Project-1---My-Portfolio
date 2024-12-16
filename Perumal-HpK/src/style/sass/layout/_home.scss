@@ -18,7 +18,7 @@
   &-img {
     width: 50rem;
     overflow: hidden;
-    // animation: float 5s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
   }
 }
 
@@ -125,7 +125,7 @@ svg path {
 }
 
 .copy {
-  color: $gray-Shade5;
+  color: $color-white;
   font-size: x-small;
 }
 

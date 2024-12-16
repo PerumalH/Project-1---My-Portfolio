@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import "./style/sass/pages/_app.scss";
 import Container from "./Components/Container";
-import videoClip from "./assets/bg-7.mp4";
+import videoClip from "./assets/bg-4.mp4";
 import Root from "./pages/Root";
 import ExploreMe from "./pages/ExploreMe";
 
@@ -24,10 +24,10 @@ function App() {
     },
   ]);
   return [
-    <Container key={9}>
+    <Container key={0}>
       <RouterProvider router={router}></RouterProvider>
     </Container>,
-    <video key={0} autoPlay muted loop id="background-video">
+    <video key={1} autoPlay muted loop id="background-video">
       <source src={videoClip} type="video/mp4" />
     </video>,
   ];

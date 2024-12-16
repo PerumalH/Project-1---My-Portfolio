@@ -1,5 +1,6 @@
 import logo from "../assets/React+Html.png";
 import "../style/sass/layout/_home.scss";
+import Tilt from "react-parallax-tilt";
 
 import HiImg from "../assets/hi-unscreen.gif";
 import { NavLink } from "react-router";
@@ -9,18 +10,19 @@ const Home = () => {
       <div className="list-item logo">
         <img src={logo} alt="React=Html+JS" className="logo-img" />
       </div>
+      <Tilt>
+        <div className="list-item intro">
+          <p>{`Hello World!`}</p>
 
-      <div className="list-item intro">
-        <p>{`Hello World!`}</p>
+          <div className="intro-me">
+            <h4 className="name">{"I'm PERUMAL H"}</h4>
+            <hr />
+            <h4 className="desire">{"<Frontend Developer/>"}</h4>
+          </div>
 
-        <div className="intro-me">
-          <h4 className="name">{"I'm PERUMAL H"}</h4>
-          <hr />
-          <h4 className="desire">{"<Frontend Developer/>"}</h4>
+          <img src={HiImg} alt="hi" className="intro-img" />
         </div>
-
-        <img src={HiImg} alt="hi" className="intro-img" />
-      </div>
+      </Tilt>
       <div className="list-item action">
         <NavLink to={"explore-me"} className={"explore"}>
           Explore Me
