@@ -6,18 +6,19 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  // font-style: italic;
 }
-.list-item {
-}
+
 .logo {
   width: 50rem;
   height: 14rem;
   text-align: center;
   margin-bottom: 3rem;
+  transform: translateY(-4rem);
   &-img {
     width: 50rem;
     overflow: hidden;
-    animation: float 5s ease-in-out infinite;
+    // animation: float 5s ease-in-out infinite;
   }
 }
 
@@ -31,7 +32,7 @@
   overflow: hidden;
   // border: 1px $blue-3 solid;
   // box-shadow: $blue-3 0px 5px 35px -10px;
-
+  transform: translateY(-2rem);
   & p {
     position: absolute;
     left: 57.9%;
@@ -80,10 +81,39 @@
     left: 38%;
   }
 }
-.Name {
-  position: absolute;
-  margin: 2rem;
-  top: 8%;
+.action {
+  display: flex;
+  gap: 1rem;
+  width: 50rem;
+  font-size: 1.3rem;
+  justify-content: center;
+  padding: 2rem 0;
+  transform: translateY(-10rem);
+  border: 1px $color-white solid;
+  border-radius: 0.4rem;
+  background-color: $black-1;
+
+  & a {
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 1px $color-white solid;
+    border-radius: 0.2rem;
+    color: $color-white;
+    background-color: $black-1;
+    border: 1px $blue-3 solid;
+    box-shadow: $blue-3 0px 0px 40px -11px;
+    // animation: glowInOut 2s infinite ease-in-out;
+
+    &:hover {
+      color: $black-1;
+      background-color: $color-white;
+    }
+  }
+
+  & p {
+    transform: translateY(0.6rem);
+    color: $color-white;
+  }
 }
 
 svg path {
@@ -105,6 +135,7 @@ svg path {
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  display: none;
 
   .symbol {
     position: absolute;

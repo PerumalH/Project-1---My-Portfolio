@@ -173,14 +173,14 @@
 
 @keyframes glowInOut {
   0% {
-    box-shadow: $color-white 0px 0px 40px -10px;
+    box-shadow: $color-white 0px 0px 40px -5px;
   }
 
   50% {
-    box-shadow: $color-white 0px 0px 40px -20px;
+    box-shadow: $color-white 0px 0px 35px -10px;
   }
 
   100% {
-    box-shadow: $color-white 0px 0px 40px -30px;
+    box-shadow: $color-white 0px 0px 40px -15px;
   }
 }
