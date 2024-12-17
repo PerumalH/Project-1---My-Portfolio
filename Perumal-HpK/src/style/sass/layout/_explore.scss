@@ -4,6 +4,16 @@
 
   &-list {
     list-style: none;
+    & li:last-child a {
+      color: $color-white;
+      background-color: $black-1;
+      border: 1px $blue-3 solid;
+      box-shadow: $blue-3 0px 0px 40px -11px;
+      &:hover {
+        color: $black-1;
+        background-color: $color-white;
+      }
+    }
   }
 }
 

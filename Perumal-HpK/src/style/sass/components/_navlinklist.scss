@@ -8,19 +8,31 @@ li {
     transform: translateX(9rem);
     width: 25rem;
   }
+
   & a {
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.6rem;
     background-color: $color-white;
-    border: 1px $black-1 solid;
+    border: 2px $blue-3 solid;
     color: $black-1;
+    border-radius: 0.5rem;
     transition: all 1s ease-in-out;
+    background-color: $black-1;
+    color: $color-white;
+    border: 1px $green-0 solid;
+    box-shadow: $green-0 0px 0px 40px -11px;
+
+    &:hover {
+      color: $black-1;
+      background-color: $color-white;
+    }
 
     &.active {
       color: $green-0;
       background-color: $black-1;
-      border: 1px $color-white solid;
+      border: 1px $green-0 solid;
+      box-shadow: $green-0 0px 0px 40px -5px;
       padding: 1rem;
     }
   }
