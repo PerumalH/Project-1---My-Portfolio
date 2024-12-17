@@ -4,7 +4,13 @@ import "./style/sass/pages/_app.scss";
 import Container from "./Components/Container";
 import videoClip from "./assets/bg-4.mp4";
 import Root from "./pages/Root";
-import ExploreMe from "./pages/ExploreMe";
+import RootExploreMe from "./pages/RootExploreMe";
+import AboutMe from "./pages/AboutMe";
+import Skill from "./pages/Skill";
+import Experience from "./pages/Experience";
+import Project from "./pages/Project";
+import Education from "./pages/Education";
+import Contacts from "./pages/Contacts";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,7 +24,30 @@ function App() {
         },
         {
           path: "explore-me",
-          element: <ExploreMe />,
+          element: <RootExploreMe />,
+          children: [
+            { path: "About-me", index: true, element: <AboutMe /> },
+            {
+              path: "Skill",
+              element: <Skill />,
+            },
+            {
+              path: "Experience",
+              element: <Experience />,
+            },
+            {
+              path: "Projects",
+              element: <Project />,
+            },
+            {
+              path: "Education",
+              element: <Education />,
+            },
+            {
+              path: "Contacts",
+              element: <Contacts />,
+            },
+          ],
         },
       ],
     },

@@ -1,0 +1,23 @@
+@import "../abstracts/variable";
+li {
+  text-align: right;
+  padding: 3rem;
+  width: 20rem;
+  transition: all 1s ease-in-out;
+  &.Thanks {
+    transform: translateX(9rem);
+    width: 25rem;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+    transition: all 1s ease-in-out;
+    &.active {
+      color: $green-0;
+      background-color: $black-1;
+      border: 1px $color-white solid;
+      padding: 1rem;
+    }
+  }
+}

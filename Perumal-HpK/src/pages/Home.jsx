@@ -43,7 +43,8 @@ const Home = () => {
       </div>
       <div className="copy">
         <p>
-          &copy; 2024 Made with 💙 by Perumal HpK | Keep Coding, Keep Growing 🚀
+          Copyright &copy; 2024 Made with 💙 by Perumal HpK | Keep Coding, Keep
+          Growing 🚀
         </p>
         <p>All Rights Reserved.</p>
       </div>
