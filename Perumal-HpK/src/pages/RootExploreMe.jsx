@@ -1,6 +1,7 @@
 import { Outlet, useNavigate } from "react-router";
 import ExploreMe from "./ExploreMe";
 import { useEffect } from "react";
+import "../style/sass/layout/_explore.scss";
 
 const RootExploreMe = () => {
   const nav = useNavigate();
@@ -8,10 +9,12 @@ const RootExploreMe = () => {
     nav("About-me");
   }, []);
   return (
-    <main>
-      <ExploreMe />
-      <Outlet />
-    </main>
+    <>
+      <main className="block">
+        <ExploreMe />
+        <Outlet />
+      </main>
+    </>
   );
 };
 

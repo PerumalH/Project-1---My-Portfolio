@@ -16,17 +16,7 @@ const ExploreMe = () => {
     <div className="section">
       <ul className="section-list">
         {navList.map((section, index) => {
-          return (
-            <NavLinkList key={index} section={section} index={index} />
-            // <li key={index} className={`${section}`}>
-            //   <NavLink
-            //     to={section}
-            //     className={({ isActive }) => (isActive ? "active" : undefined)}
-            //   >
-            //     {section}
-            //   </NavLink>
-            // </li>
-          );
+          return <NavLinkList key={index} section={section} index={index} />;
         })}
       </ul>
     </div>

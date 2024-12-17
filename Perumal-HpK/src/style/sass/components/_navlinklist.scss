@@ -2,17 +2,21 @@
 li {
   text-align: right;
   padding: 3rem;
-  width: 20rem;
+  width: 22rem;
   transition: all 1s ease-in-out;
   &.Thanks {
     transform: translateX(9rem);
     width: 25rem;
   }
-  a {
+  & a {
     text-decoration: none;
     text-transform: uppercase;
-    color: $color-white;
+    padding: 0.6rem;
+    background-color: $color-white;
+    border: 1px $black-1 solid;
+    color: $black-1;
     transition: all 1s ease-in-out;
+
     &.active {
       color: $green-0;
       background-color: $black-1;
