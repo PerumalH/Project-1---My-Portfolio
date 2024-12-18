@@ -5,13 +5,16 @@
   &-list {
     list-style: none;
     & li:last-child a {
-      color: $color-white;
-      background-color: $black-1;
+      text-transform: none;
+      color: $black-1;
+      background-color: $color-white;
+
       border: 1px $blue-3 solid;
-      box-shadow: $blue-3 0px 0px 40px -11px;
+      box-shadow: $blue-3 0px 0px 40px -6px;
+      // animation: glowInOut 3s infinite ease-in-out;
       &:hover {
-        color: $black-1;
-        background-color: $color-white;
+        color: $color-white;
+        background-color: $black-1;
       }
     }
   }
@@ -20,17 +23,17 @@
     top: 5%;
     right: 10%;
     text-decoration: none;
-    text-transform: uppercase;
     padding: 0.6rem;
     border-radius: 0.5rem;
     transition: all 0.7s ease-in-out;
-    color: $color-white;
-    background-color: $black-1;
-    border: 1px $blue-3 solid;
-    box-shadow: $blue-3 0px 0px 40px -11px;
+    color: $black-1;
+    background-color: $color-white;
+    // border: 1px $blue-3 solid;
+    // box-shadow: $blue-3 0px 0px 40px -4px;
+    // animation: glowInOut 3s infinite ease-in-out;
     &:hover {
-      color: $black-1;
-      background-color: $color-white;
+      color: $color-white;
+      background-color: $black-1;
     }
   }
 }

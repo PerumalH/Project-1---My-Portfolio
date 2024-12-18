@@ -10,7 +10,7 @@ const ExploreMe = () => {
     "Projects",
     "Education",
     "Contacts",
-    "Excite-Me",
+    "Excite-ME",
   ];
   // const nav = useNavigate();
   return (
@@ -22,7 +22,7 @@ const ExploreMe = () => {
       </ul>
 
       <NavLink to={"/"} className={"Rediscover-Me"}>
-        Rediscover-Me
+        Rediscover-ME
       </NavLink>
     </div>
   );

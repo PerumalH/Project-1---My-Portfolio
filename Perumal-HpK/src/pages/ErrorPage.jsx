@@ -6,7 +6,7 @@ const ErrorPage = () => {
     <Container container={"Container-error"}>
       <div className="error">
         <div className="error-info">
-          <p>{"I Think, You're Lost In My Wep Space."}</p>
+          <p>{"I Think, You're Lost In My WEB Space."}</p>
           <p>{" Don't Worry. I'll Guide You To Back."}</p>
         </div>
         <NavLink to={"/"} className={"error-action"}>
