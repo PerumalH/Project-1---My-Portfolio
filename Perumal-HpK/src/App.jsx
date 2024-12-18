@@ -26,9 +26,9 @@ function App() {
           path: "explore-me",
           element: <RootExploreMe />,
           children: [
-            { path: "About-me", index: true, element: <AboutMe /> },
+            { path: "About-Me", index: true, element: <AboutMe /> },
             {
-              path: "Skill",
+              path: "Skill-Set",
               element: <Skill />,
             },
             {

@@ -6,7 +6,7 @@ import "../style/sass/layout/_explore.scss";
 const RootExploreMe = () => {
   const nav = useNavigate();
   useEffect(() => {
-    nav("About-me");
+    nav("About-Me");
   }, []);
   return (
     <>

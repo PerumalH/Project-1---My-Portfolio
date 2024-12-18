@@ -4,7 +4,7 @@ import NavLinkList from "../Components/NavLinkList";
 const ExploreMe = () => {
   const navList = [
     "About-Me",
-    "Skill",
+    "Skill-Set",
     "Experience",
     "Projects",
     "Education",

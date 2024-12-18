@@ -1,0 +1,44 @@
+@import "../abstracts/variable";
+
+.line {
+  position: relative;
+  line-height: 3rem;
+  width: 40rem;
+  height: 14rem;
+  margin: 2rem;
+  background-color: $color-white;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  font-size: 1.5rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &-connect {
+    // position: absolute;
+
+    top: 20%;
+    left: 10%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: $black-1;
+    background-color: $black-1;
+    background: linear-gradient(160deg, $rose-1 0%, $green-0 0%, $blue-3 65%);
+  }
+  &-value {
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    border: none;
+    background-color: $black-1;
+    padding: 0.5rem 1rem;
+    color: $color-white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    &:hover {
+      background-color: $turquoise-Shade1;
+      color: $black-1;
+      border: 1px $black-1 solid;
+    }
+  }
+}
