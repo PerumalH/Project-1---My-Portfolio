@@ -25,12 +25,12 @@ const Home = () => {
       </Tilt>
       <div className="list-item action">
         <NavLink to={"explore-me"} className={"explore"}>
-          Explore Me
+          Explore-ME
         </NavLink>
 
         <p>Before you Going to </p>
         <NavLink to={"explore-me"} className={"excite"}>
-          Excite Me
+          Excite-ME
         </NavLink>
       </div>
       <div className="floating-symbols">

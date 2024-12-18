@@ -99,16 +99,17 @@
     padding: 0.5rem;
     border: 1px $color-white solid;
     border-radius: 0.2rem;
-    color: $color-white;
-    background-color: $black-1;
+
+    color: $black-1;
+    background-color: $color-white;
     border: 1px $blue-3 solid;
     box-shadow: $blue-3 0px 0px 40px -11px;
     // animation: glowInOut 2s infinite ease-in-out;
     transition: background-color 2s;
 
     &:hover {
-      color: $black-1;
-      background-color: $color-white;
+      color: $color-white;
+      background-color: $black-1;
     }
   }
 

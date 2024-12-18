@@ -11,12 +11,14 @@ import Experience from "./pages/Experience";
 import Project from "./pages/Project";
 import Education from "./pages/Education";
 import Contacts from "./pages/Contacts";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,

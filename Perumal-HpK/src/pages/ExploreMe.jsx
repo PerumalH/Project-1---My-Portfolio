@@ -1,5 +1,6 @@
 import "../style/sass/layout/_explore.scss";
 import NavLinkList from "../Components/NavLinkList";
+import { NavLink } from "react-router";
 
 const ExploreMe = () => {
   const navList = [
@@ -19,6 +20,10 @@ const ExploreMe = () => {
           return <NavLinkList key={index} section={section} index={index} />;
         })}
       </ul>
+
+      <NavLink to={"/"} className={"Rediscover-Me"}>
+        Rediscover-Me
+      </NavLink>
     </div>
   );
 };

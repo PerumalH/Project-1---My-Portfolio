@@ -1,3 +1,5 @@
+@import "../abstracts/variable";
+
 .Container {
   inset: 0px;
   width: 100vw;
@@ -17,11 +19,28 @@
   margin: auto;
   font-family: "Cinzel", serif;
   margin-right: 6rem;
-  background-color: rgba($black-1, 0.4);
+  background-color: rgba($black-1, 0.5);
   border: 1px $color-white solid;
   border-radius: 0.5rem;
   text-align: center;
   align-content: center;
   overflow: auto;
   animation: fadeIn 1.5s ease-in-out;
+}
+
+.Container-error {
+  inset: 0px;
+  width: 50vw;
+  height: 50dvh;
+  margin: auto;
+  font-size: 1.5rem;
+  background-color: rgba($black-1, 0.5);
+  // border: 1px $color-white solid;
+  border-radius: 0.5rem;
+  text-align: center;
+  align-content: center;
+
+  // border: 1px $red-1 solid;
+  box-shadow: $blue-3 0px 0px 40px -11px;
+  overflow: auto;
 }
