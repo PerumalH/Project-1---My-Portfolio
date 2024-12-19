@@ -1,0 +1,19 @@
+@import "../abstracts/variable";
+
+.Details {
+  color: $color-white;
+
+  &-full {
+    display: none;
+  }
+  &-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    height: 5rem;
+    width: 27rem;
+    box-shadow: $blue-3 0px 0px 40px -4px;
+    cursor: pointer;
+  }
+}
