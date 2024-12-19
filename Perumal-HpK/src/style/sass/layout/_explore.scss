@@ -6,11 +6,10 @@
     list-style: none;
     & li:last-child a {
       text-transform: none;
-      color: $black-1;
-      background-color: $color-white;
-
-      border: 1px $blue-3 solid;
-      box-shadow: $blue-3 0px 0px 40px -6px;
+      color: $green-0;
+      background-color: $black-1;
+      border: 1px $green-0 solid;
+      // box-shadow: $blue-3 0px 0px 40px -6px;
       // animation: glowInOut 3s infinite ease-in-out;
       &:hover {
         color: $color-white;
@@ -26,9 +25,9 @@
     padding: 0.6rem;
     border-radius: 0.5rem;
     transition: all 0.7s ease-in-out;
-    color: $black-1;
-    background-color: $color-white;
-    // border: 1px $blue-3 solid;
+    color: $green-0;
+    background-color: $black-1;
+    border: 1px $green-0 solid;
     // box-shadow: $blue-3 0px 0px 40px -4px;
     // animation: glowInOut 3s infinite ease-in-out;
     &:hover {

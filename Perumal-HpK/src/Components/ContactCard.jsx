@@ -3,6 +3,7 @@ import "../style/sass/components/_contactCard.scss";
 
 const ContactCard = ({ lineofConnect, Connect }) => {
   let WhereTo = "https://" + Connect;
+
   if (Connect.includes("@")) {
     WhereTo = "mailto:" + Connect;
   }
@@ -12,7 +13,10 @@ const ContactCard = ({ lineofConnect, Connect }) => {
 
   return (
     <li className="line">
-      <p className="line-connect">{lineofConnect}</p>
+      <p className="line-connect">
+        {lineofConnect}
+        {/* <img src={img} alt={lineofConnect} className={lineofConnect} /> */}
+      </p>
       <a
         className={`line-value ${lineofConnect}`}
         href={WhereTo}

@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   // font-style: italic;
+  animation: flicker-wrap 1s ease-in;
 }
 
 .logo {
@@ -46,9 +47,9 @@
     border-radius: 0.5rem;
     // font-style: italic;
     z-index: 1;
-    background-color: $black-1;
     color: $color-white;
-    border: 1px $color-white solid;
+    background-color: $black-1;
+    border: 1px $green-0 solid;
     // box-shadow: $color-white 0px 0px 50px -10px;
     // transform: rotate(-10deg);
   }
@@ -66,7 +67,7 @@
     top: 35%;
     background-color: $black-1;
     color: $color-white;
-    border: 1px $color-white solid;
+    border: 1px $blue-3 solid;
 
     // animation: glowInOut 3s infinite ease-in-out;
     & hr {
