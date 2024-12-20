@@ -13,7 +13,7 @@
     color: $color-white;
     border-radius: 0.4rem;
     padding: 1rem;
-    animation: glowInOut-1 7s ease-in-out infinite;
+    animation: glowInOut-1 9s ease-in-out infinite;
 
     &:nth-child(1) {
       top: 10%;
@@ -50,12 +50,18 @@
       animation-delay: 5s;
     }
     &:nth-child(7) {
-      top: 30%;
-      right: 48%;
+      bottom: 10%;
+      right: 43.4%;
       animation-delay: 6s;
     }
     &:nth-child(8) {
-      top: 60%;
+      top: 25%;
+      right: 48%;
+      animation-delay: 7s;
+    }
+
+    &:nth-child(9) {
+      top: 50%;
       right: 40%;
       width: 30rem;
       color: $yellow-1;

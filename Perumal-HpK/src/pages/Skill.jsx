@@ -10,10 +10,11 @@ const Skill = () => {
         <span className="symbol">{"Redux"}</span>
         <span className="symbol">{"React Router"}</span>
         <span className="symbol">{"React Query"}</span>
+        <span className="symbol">{"React Hook Form"}</span>
         <span className="symbol">{"React Js"}</span>
         <span className="symbol">
           {
-            "On a journey of exploring frontend-related libraries and still learning ... .. ."
+            "On a journey of exploring frontend-related libraries and still learning."
           }
         </span>
       </div>
