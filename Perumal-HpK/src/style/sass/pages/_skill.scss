@@ -1,0 +1,67 @@
+@import "../abstracts/variable";
+
+.floating-symbols {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .symbol {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $color-white;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    animation: glowInOut-1 7s ease-in-out infinite;
+
+    &:nth-child(1) {
+      top: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      top: 10%;
+      right: 20%;
+      animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+      bottom: 15%;
+      left: 15%;
+      animation-delay: 2s;
+    }
+
+    &:nth-child(4) {
+      bottom: 15%;
+      right: 20%;
+      animation-delay: 3s;
+    }
+
+    &:nth-child(5) {
+      top: 45%;
+      left: 5%;
+      animation-delay: 4s;
+    }
+    &:nth-child(6) {
+      top: 45%;
+      right: 5%;
+      animation-delay: 5s;
+    }
+    &:nth-child(7) {
+      top: 30%;
+      right: 48%;
+      animation-delay: 6s;
+    }
+    &:nth-child(8) {
+      top: 60%;
+      right: 40%;
+      width: 30rem;
+      color: $yellow-1;
+      background-color: $black-1;
+      animation: float 4s ease-in-out infinite;
+      font-size: 1.3rem;
+    }
+  }
+}

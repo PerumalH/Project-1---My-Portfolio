@@ -121,13 +121,7 @@
   0% {
     opacity: 0;
   }
-  15% {
-    opacity: 1;
-  }
 
-  30% {
-    opacity: 0;
-  }
   50% {
     opacity: 1;
   }
@@ -203,5 +197,19 @@
 
   100% {
     box-shadow: $blue-1 0px 0px 40px -10px;
+  }
+}
+
+@keyframes glowInOut-1 {
+  0% {
+    box-shadow: $yellow-1 0px 0px 25px -5px;
+  }
+
+  50% {
+    box-shadow: $yellow-1 0px 0px 30px -10px;
+  }
+
+  100% {
+    box-shadow: $yellow-1 0px 0px 0px -20px;
   }
 }

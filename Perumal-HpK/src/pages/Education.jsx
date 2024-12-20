@@ -6,19 +6,26 @@ import Container from "../Components/Container";
 const Education = () => {
   const EduList = [
     {
-      BtnName: "Bachelor's Degree",
+      BtnName: "B.E CSE",
       DetailsOf: {
-        Detail1: "Computer Science and Engineering",
-        Detail2: "SNS College Of Technology, Coimbatore.",
+        Detail1: "SNS College Of Technology, Coimbatore.",
         Detail3: "8.89 CGPA",
       },
     },
     {
-      BtnName: "12th & 10th",
+      BtnName: "12th Standard",
       DetailsOf: {
-        Detail1: "Computer Science and Engineering",
-        Detail2: "SNS College Of Technology, Coimbatore.",
-        Detail3: "8.89 CGPA",
+        Detail1: "Little Flower Hr.Sec School, Kumbakonam.",
+
+        Detail3: "82 %",
+      },
+    },
+    {
+      BtnName: "10th Standard",
+      DetailsOf: {
+        Detail1: "Minerva Hr.Sec School, Kadichambadi.",
+
+        Detail3: "92 %",
       },
     },
   ];
@@ -32,6 +39,7 @@ const Education = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-evenly",
+            gap: "4rem",
             alignItems: "center",
           }}
         >

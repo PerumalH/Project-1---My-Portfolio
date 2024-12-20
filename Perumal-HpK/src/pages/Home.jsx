@@ -33,14 +33,7 @@ const Home = () => {
           Excite-ME
         </NavLink>
       </div>
-      <div className="floating-symbols">
-        <span className="symbol">{"<!Doctype>"}</span>
-        <span className="symbol">{"z-index"}</span>
-        <span className="symbol">{"Async / Await"}</span>
-        <span className="symbol">{"useEffect"}</span>
-        <span className="symbol">{"@Mixins"}</span>
-        <span className="symbol">{"Git Fetch"}</span>
-      </div>
+
       <div className="copy">
         <p>
           Copyright &copy; 2024 Made with 💙 by Perumal HpK | Keep Coding, Keep

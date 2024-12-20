@@ -1,19 +1,78 @@
 @import "../abstracts/variable";
 
 .Details {
-  color: $color-white;
+  color: $black-1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 7rem;
+  border-radius: 2rem;
+  width: 27rem;
+  transition: all 2s ease-in-out;
+  border: 1px $color-white solid;
+  background-color: $color-white;
 
   &-full {
-    display: none;
+    padding-top: 12rem;
+    transition: all 2s ease-in-out;
+    background-color: $black-1;
+    height: 35rem;
+    width: 30rem;
+    overflow: hidden;
+
+    & .D2,
+    .D3,
+    .D1 {
+      padding: 1rem;
+      color: $color-white;
+    }
+
+    // display: none;
   }
   &-action {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 2rem;
+    color: $color-white;
+    font-size: 1.2rem;
     height: 5rem;
     width: 27rem;
-    box-shadow: $blue-3 0px 0px 40px -4px;
+
+    border: 1px $color-white solid;
+    box-shadow: $color-white 0px 0px 40px -4px;
     cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+      border: 1px $color-white solid;
+      box-shadow: $red-1 0px 0px 40px -4px;
+      transition: none;
+    }
+  }
+
+  &-aftAction {
+    position: absolute;
+    top: 10%;
+    transition: all 2s ease-in-out;
+  }
+}
+
+.isGreat {
+  background-color: transparent;
+  width: 40rem;
+  height: 25rem;
+}
+
+.hidden {
+  position: absolute;
+  height: 7rem;
+  width: 20rem;
+  & .D2,
+  .D3,
+  .D1 {
+    display: none;
   }
 }
