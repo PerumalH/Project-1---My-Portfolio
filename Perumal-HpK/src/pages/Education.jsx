@@ -1,9 +1,11 @@
 // import React from 'react'
 
+import { useState } from "react";
 import BtnDetails from "../Components/BtnDetails";
 import Container from "../Components/Container";
 
 const Education = () => {
+  const [ActiveButton, setActiveButton] = useState("");
   const EduList = [
     {
       BtnName: "B.E CSE",
@@ -49,6 +51,8 @@ const Education = () => {
                 key={index}
                 BtnName={Value.BtnName}
                 Details={Value.DetailsOf}
+                ActBtn={ActiveButton}
+                ActSet={setActiveButton}
               />
             );
           })}

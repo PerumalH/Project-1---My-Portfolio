@@ -42,13 +42,13 @@
     width: 27rem;
 
     border: 1px $color-white solid;
-    box-shadow: $color-white 0px 0px 40px -4px;
+    box-shadow: $red-1 0px 0px 40px -4px;
     cursor: pointer;
     z-index: 1;
 
     &:hover {
       border: 1px $color-white solid;
-      box-shadow: $red-1 0px 0px 40px -4px;
+      box-shadow: $color-white 0px 0px 40px -4px;
       transition: none;
     }
   }

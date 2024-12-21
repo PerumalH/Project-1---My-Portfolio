@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../style/sass/components/_btnDetails.scss";
 
-const BtnDetails = ({ BtnName, Details }) => {
+const BtnDetails = ({ BtnName, Details, ActBtn, ActSet }) => {
   const [isHidden, setIsHidden] = useState(false);
   const handleDetails_full = () => {
     setIsHidden((preState) => !preState);
+    ActSet(BtnName);
   };
+
+  useEffect(() => {
+    if (ActBtn === BtnName) {
+      setIsHidden(true);
+    } else {
+      setIsHidden(false);
+    }
+  }, [ActBtn, BtnName]);
   return (
     <div className={`Details ${isHidden ? "isGreat" : ""}`}>
       <div className={`Details-full ${isHidden ? "" : "hidden"}`}>

@@ -5,7 +5,7 @@ const Project = () => {
   const project = [
     {
       description:
-        "My Portfolio Website - It's is a personal project aimed at showcasing my skills, experience, and projects. It’s built with a focus on clean, responsive design and seamless user experience.",
+        "My Portfolio Website - It is a personal project aimed at showcasing my skills, experience, and projects. It’s built with a focus on clean, responsive design and seamless user experience.",
       techStack: ["React Js", "React Router", "SCSS"],
       link: "",
     },
