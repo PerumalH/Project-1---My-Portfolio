@@ -34,6 +34,10 @@
         #eaccf8 48%,
         #69eacb 100%
       );
+
+      .CompanyList-one-logo {
+        transform: translateY(-1.5rem);
+      }
     }
     &-logo {
       position: absolute;
@@ -44,9 +48,6 @@
       box-shadow: $black-1 15px 15px 20px -10px;
       transition: all 1s ease-in-out;
       // animation: float 9s ease-in-out infinite;
-      &:hover {
-        transform: translateY(-1rem);
-      }
     }
     &-name {
       color: $black-1;

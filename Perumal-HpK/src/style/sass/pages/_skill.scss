@@ -15,6 +15,11 @@
     padding: 1rem;
     animation: glowInOut-1 9s ease-in-out infinite;
 
+    &:hover {
+      cursor: pointer;
+      border: 1px $yellow-1 solid;
+    }
+
     &:nth-child(1) {
       top: 10%;
       left: 15%;

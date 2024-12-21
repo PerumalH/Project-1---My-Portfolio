@@ -92,13 +92,14 @@
     width: 8ch;
   }
 }
-
 @keyframes blink {
   50% {
-    border-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
-
 @keyframes flicker {
   0% {
     color: $color-white;

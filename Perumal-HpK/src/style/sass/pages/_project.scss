@@ -1,0 +1,70 @@
+@import "../abstracts/variable";
+
+.Project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //   margin: 3rem;
+
+  &-State {
+    color: $color-white;
+    // padding: 1rem;
+    width: 70rem;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    height: 23rem;
+    box-shadow: $purple-5 0px 0px 40px -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $black-1;
+
+    & .github {
+      position: relative;
+      width: 25rem;
+
+      &-logo {
+        position: absolute;
+        bottom: 20%;
+        right: 38%;
+        background-color: $color-white;
+        border-radius: 50%;
+        width: 6rem;
+        height: 4rem;
+
+        animation: float 3s ease-in-out infinite;
+      }
+      &-action {
+        position: absolute;
+        background-color: $color-white;
+        color: $black-1;
+        text-decoration: none;
+        padding: 0.5rem;
+        right: 10%;
+        width: 20rem;
+        border-radius: 0.5rem;
+        transition: all 0.5s ease-in-out;
+        box-shadow: $black-1 0px 0px 40px -5px;
+
+        &:hover {
+          box-shadow: $green-0 0px 0px 40px -5px;
+          color: $color-white;
+          background-color: $black-1;
+        }
+      }
+    }
+  }
+  &-List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    width: 70rem;
+    border-radius: 0.7rem;
+    height: 23rem;
+    overflow: hidden;
+  }
+}
