@@ -5,7 +5,7 @@ const Project = () => {
   const project = [
     {
       description:
-        "My Portfolio Website - It is a personal project aimed at showcasing my skills, experience, and projects. It’s built with a focus on clean, responsive design and seamless user experience.",
+        "My Portfolio Website - It Is A Personal Project Aimed At Showcasing My Skills, Experience, And Projects. It’s Built With A Focus On Clean, Responsive Design And Seamless User Experience.",
       techStack: ["React Js", "React Router", "SCSS"],
       link: "",
     },
@@ -15,11 +15,11 @@ const Project = () => {
     <Container container={"Container-1"}>
       <div className="Project">
         <div className="Project-State">
-          <p>
+          {/* <p>
             {
               "These Are Not Just Projects, They Are My Ideas Turned Into Reality, Coded From Scratch, And Brought To Life. Here’s What I Proudly Call My Work In Action."
             }
-          </p>
+          </p> */}
           <div className="github">
             <img
               src="/public/github.png"

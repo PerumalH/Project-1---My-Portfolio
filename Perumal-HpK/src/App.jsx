@@ -12,6 +12,7 @@ import Project from "./pages/Project";
 import Education from "./pages/Education";
 import Contacts from "./pages/Contacts";
 import ErrorPage from "./pages/ErrorPage";
+import ExciteMe from "./pages/ExciteMe";
 
 function App() {
   const router = createBrowserRouter([
@@ -50,6 +51,10 @@ function App() {
               element: <Contacts />,
             },
           ],
+        },
+        {
+          path: "/excite-Me",
+          element: <ExciteMe />,
         },
       ],
     },

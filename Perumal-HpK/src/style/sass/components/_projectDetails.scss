@@ -1,7 +1,8 @@
 @import "../abstracts/variable";
 .project {
   position: relative;
-  border: 1px $purple-3 solid;
+  // border: 1px $purple-3 solid;
+  box-shadow: $purple-3 0px 0px 40px -5px;
   background-color: $black-1;
   width: 70rem;
   height: 15rem;
@@ -22,23 +23,25 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     text-decoration: none;
-    border: 1px $green-0 solid;
     color: $black-1;
     &:hover {
-      background-color: $green-0;
+      box-shadow: $green-0 0px 0px 40px -5px;
+      color: $color-white;
+      background-color: $black-1;
     }
   }
   &-tech {
     position: absolute;
     bottom: 10%;
     display: flex;
+    // font-family: "Avalanche";
     justify-content: space-around;
     width: 35rem;
     font-size: 1rem;
     & p {
       background-color: $black-1;
       border: 1px $color-white solid;
-      padding: 0.5rem;
+      padding: 0.2rem;
       border-radius: 0.5rem;
       color: $green-0;
     }

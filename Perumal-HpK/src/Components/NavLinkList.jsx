@@ -19,7 +19,7 @@ const NavLinkList = ({ index, section }) => {
   return (
     <li key={index} className={`${ListActive} ${section}-${ListActive}`}>
       <NavLink
-        to={section}
+        to={section === "Excite-ME" ? "/excite-Me" : section}
         className={({ isActive }) => {
           if (isActive) {
             return "list active";

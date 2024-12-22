@@ -5,15 +5,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  //   margin: 3rem;
+  gap: 1rem;
 
   &-State {
     color: $color-white;
     // padding: 1rem;
-    width: 70rem;
+    width: 30rem;
     border-radius: 0.7rem;
     font-size: 1.4rem;
-    height: 23rem;
+    height: 10rem;
     box-shadow: $purple-3 0px 0px 40px -5px;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem;
-    width: 70rem;
+    width: 80rem;
     border-radius: 0.7rem;
     height: 23rem;
     overflow: hidden;

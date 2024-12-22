@@ -46,3 +46,25 @@
   box-shadow: $blue-3 0px 0px 40px -11px;
   overflow: auto;
 }
+
+.Container-2 {
+  inset: 0px;
+  width: 70vw;
+  height: 70dvh;
+  margin: auto;
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // border: 1px $color-white solid;
+  border-radius: 0.5rem;
+  text-align: center;
+  align-content: center;
+  animation: flicker-wrap 1s ease-in;
+
+  // border: 1px $red-1 solid;
+
+  overflow: auto;
+  transition: all 0.5s ease-in-out;
+}

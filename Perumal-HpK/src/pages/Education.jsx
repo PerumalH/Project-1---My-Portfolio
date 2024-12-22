@@ -17,7 +17,7 @@ const Education = () => {
     {
       BtnName: "12th Standard",
       DetailsOf: {
-        Detail1: "Little Flower Hr.Sec School, Kumbakonam.",
+        Detail1: "The Little Flower Hr.Sec School, Kumbakonam.",
 
         Detail3: "82 %",
       },
