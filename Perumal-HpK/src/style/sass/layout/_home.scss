@@ -1,4 +1,5 @@
 @import "../abstracts/variable";
+@import "../abstracts/mixins";
 
 .Lists {
   height: 70rem;
@@ -9,6 +10,10 @@
   align-items: center;
   // font-style: italic;
   animation: flicker-wrap 1.5s ease-in;
+
+  @include respond(phone) {
+    height: 60rem;
+  }
 }
 
 .logo {
@@ -21,6 +26,14 @@
     width: 50rem;
     overflow: hidden;
     animation: float 5s ease-in-out infinite;
+  }
+
+  @include respond(phone) {
+    transform: translateY(-5rem);
+    margin-left: 2rem;
+    &-img {
+      animation: float 3s ease-in-out infinite;
+    }
   }
 }
 
@@ -82,6 +95,25 @@
     top: 20%;
     left: 38%;
   }
+  @include respond(phone) {
+    & p {
+      left: 49%;
+      box-shadow: $green-0 0px 0px 40px -11px;
+    }
+    & &-me {
+      width: 26rem;
+      top: 30%;
+      left: 6%;
+      font-size: 1.3rem;
+      box-shadow: $blue-3 0px 0px 40px -11px;
+    }
+    &-img {
+      width: 24rem;
+      position: absolute;
+      top: 20%;
+      left: 42%;
+    }
+  }
 }
 .action {
   display: flex;
@@ -94,6 +126,12 @@
   border: 1px $color-white solid;
   border-radius: 0.4rem;
   background-color: $black-1;
+
+  @include respond(phone) {
+    width: 37.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
 
   & a {
     text-decoration: none;

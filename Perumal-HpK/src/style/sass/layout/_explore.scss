@@ -1,6 +1,11 @@
 @import "../abstracts/variable";
+@import "../abstracts/mixins";
+
 .section {
   width: 33rem;
+  @include respond(phone) {
+    position: absolute;
+  }
 
   &-list {
     list-style: none;
@@ -35,6 +40,10 @@
       background-color: $black-1;
       box-shadow: $green-0 0px 0px 40px -6px;
     }
+
+    @include respond(phone) {
+      top: 105%;
+    }
   }
 }
 
@@ -49,6 +58,11 @@
   left: 6%;
   pointer-events: none;
   transition: position 6s ease-in-out;
+
+  @include respond(phone) {
+    left: -38%;
+    top: -20%;
+  }
 }
 
 .block {
