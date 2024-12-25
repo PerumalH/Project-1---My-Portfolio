@@ -96,14 +96,15 @@
     left: 38%;
   }
   @include respond(phone) {
+    width: 41rem;
     & p {
-      left: 49%;
+      left: 50%;
       box-shadow: $green-0 0px 0px 40px -11px;
     }
     & &-me {
       width: 26rem;
       top: 30%;
-      left: 6%;
+      left: 4%;
       font-size: 1.3rem;
       box-shadow: $blue-3 0px 0px 40px -11px;
     }
@@ -111,7 +112,7 @@
       width: 24rem;
       position: absolute;
       top: 20%;
-      left: 42%;
+      left: 44%;
     }
   }
 }
