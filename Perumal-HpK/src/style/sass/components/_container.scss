@@ -33,8 +33,7 @@
   animation: expand 2s ease-in-out;
   @include respond(phone) {
     width: 100vw;
-    height: 100vh;
-    margin-right: 0;
+    margin-right: 0rem;
   }
 }
 

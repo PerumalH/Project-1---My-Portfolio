@@ -3,6 +3,7 @@
 
 .section {
   width: 33rem;
+  transition: all 6s ease-in-out;
   @include respond(phone) {
     position: absolute;
   }
@@ -20,6 +21,20 @@
         background-color: $black-1;
         box-shadow: $green-0 0px 0px 40px -6px;
       }
+    }
+    @include respond(phone) {
+      position: fixed;
+      font-size: 1rem;
+      z-index: 5;
+      right: 0%;
+      // backdrop-filter: ;
+      // -webkit-backdrop-filter: blur(5px);
+
+      backdrop-filter: blur(10px);
+      background-color: rgba(5, 5, 5, 0.585);
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      // background-color: black;
     }
   }
   & .Rediscover-Me {
@@ -42,7 +57,32 @@
     }
 
     @include respond(phone) {
-      top: 105%;
+      position: fixed;
+      font-size: 1rem;
+      top: 90%;
+      right: 60%;
+    }
+  }
+  & .NavBarhidden {
+    display: none;
+    position: fixed;
+    top: 90%;
+    right: 10%;
+    width: 7rem;
+    height: 3.4rem;
+    font-size: 1.2rem;
+    font-family: "BarmoFont";
+    background-color: $black-1;
+    color: $green-0;
+    border: 1px $color-white solid;
+    border-radius: 0.4rem;
+    box-shadow: $green-0 0px 0px 40px -4px;
+  }
+
+  @include respond(phone) {
+    & .NavBar {
+      display: block;
+      bottom: 30%;
     }
   }
 }
@@ -58,9 +98,9 @@
   left: 6%;
   pointer-events: none;
   transition: position 6s ease-in-out;
-
   @include respond(phone) {
-    left: -38%;
+    position: fixed;
+    left: -54%;
     top: -20%;
   }
 }
@@ -68,4 +108,20 @@
 .block {
   display: flex;
   animation: flicker-wrap 1.5s ease-in;
+}
+
+@include respond(phone) {
+  .navhidden {
+    right: -55%;
+
+    .About-Me-Thanks,
+    .Skill-Set-Thanks,
+    .Experience-Thanks,
+    .Projects-Thanks,
+    .Education-Thanks,
+    .Contacts-Thanks {
+      left: -152.3%;
+      top: -20%;
+    }
+  }
 }

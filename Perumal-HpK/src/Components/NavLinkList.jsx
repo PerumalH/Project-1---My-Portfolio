@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router";
 import "../style/sass/components/_navlinklist.scss";
 
 // eslint-disable-next-line react/prop-types
-const NavLinkList = ({ index, section }) => {
+const NavLinkList = ({ index, section, Onclose }) => {
   const [ListActive, SetListActive] = useState("");
 
   const location = useLocation();
@@ -27,6 +27,7 @@ const NavLinkList = ({ index, section }) => {
             return "list";
           }
         }}
+        onClick={Onclose}
       >
         {section}
       </NavLink>
