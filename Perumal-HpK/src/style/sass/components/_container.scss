@@ -9,7 +9,11 @@
   //   border-radius: 1.4rem;
   text-align: center;
   align-content: center;
+
   overflow: auto;
+  @include respond(phone) {
+    overflow: hidden;
+  }
 }
 
 .Container-1 {
