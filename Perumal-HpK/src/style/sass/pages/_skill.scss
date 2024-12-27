@@ -1,4 +1,5 @@
 @import "../abstracts/variable";
+@import "../abstracts/mixins";
 
 .floating-symbols {
   position: relative;
@@ -15,6 +16,10 @@
     padding: 1rem;
     animation: glowInOut-1 9s ease-in-out infinite;
 
+    @include respond(phone) {
+      font-size: 0.8rem;
+    }
+
     &:hover {
       cursor: vertical-text;
       border: 1px $yellow-1 solid;
@@ -24,45 +29,71 @@
       top: 10%;
       left: 15%;
       animation-delay: 0s;
+      @include respond(phone) {
+        top: 5%;
+      }
     }
 
     &:nth-child(2) {
       top: 10%;
       right: 20%;
       animation-delay: 1s;
+      @include respond(phone) {
+        top: 5%;
+      }
     }
 
     &:nth-child(3) {
       bottom: 15%;
       left: 15%;
       animation-delay: 2s;
+      @include respond(phone) {
+        bottom: 20%;
+      }
     }
 
     &:nth-child(4) {
       bottom: 15%;
-      right: 20%;
+      right: 15%;
       animation-delay: 3s;
+      @include respond(phone) {
+        bottom: 20%;
+      }
     }
 
     &:nth-child(5) {
       top: 45%;
       left: 5%;
       animation-delay: 4s;
+      @include respond(phone) {
+        top: 40%;
+      }
     }
     &:nth-child(6) {
       top: 45%;
       right: 5%;
       animation-delay: 5s;
+      @include respond(phone) {
+        top: 40%;
+      }
     }
     &:nth-child(7) {
       bottom: 10%;
-      right: 43.4%;
+      right: 42.4%;
       animation-delay: 6s;
+      @include respond(phone) {
+        bottom: 5%;
+        right: 33.4%;
+      }
     }
     &:nth-child(8) {
       top: 25%;
       right: 48%;
       animation-delay: 7s;
+      @include respond(phone) {
+        top: 25%;
+        right: 40%;
+      }
     }
 
     &:nth-child(9) {
@@ -73,6 +104,13 @@
       background-color: $black-1;
       animation: float 4s ease-in-out infinite;
       font-size: 1.3rem;
+      @include respond(phone) {
+        font-size: 1rem;
+        width: 25rem;
+        right: 17.5%;
+        top: 55%;
+        border: 1px $yellow-1 solid;
+      }
     }
   }
 }

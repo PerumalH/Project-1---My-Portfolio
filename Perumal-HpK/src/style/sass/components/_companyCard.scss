@@ -1,9 +1,11 @@
 @import "../abstracts/variable";
+@import "../abstracts/mixins";
 
 .CompanyList {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   color: $black-1;
   // font-family: "Courier New", Courier, monospace;
   // text-transform: uppercase;
@@ -26,6 +28,9 @@
     transition: background 3s ease-in-out;
     border: 1px $black-1 solid;
     box-shadow: $color-white 15px 15px 20px -10px;
+    @include respond(phone) {
+      width: 28rem;
+    }
 
     &:hover {
       background-image: linear-gradient(
@@ -48,28 +53,47 @@
       box-shadow: $black-1 15px 15px 20px -10px;
       transition: all 1s ease-in-out;
       // animation: float 9s ease-in-out infinite;
+
+      @include respond(phone) {
+        width: 18rem;
+        height: 8rem;
+        animation: float 3s ease-in-out infinite;
+      }
     }
     &-name {
       color: $black-1;
       position: absolute;
       width: 25rem;
       top: 30%;
+      @include respond(phone) {
+        width: 25rem;
+        top: 24%;
+      }
     }
     &-role {
       color: $black-1;
       position: absolute;
       top: 55%;
       font-size: 1.5rem;
+      @include respond(phone) {
+        top: 50%;
+      }
     }
     &-type {
       color: $black-1;
       position: absolute;
       top: 64%;
+      @include respond(phone) {
+        top: 60%;
+      }
     }
     &-tenure {
       color: $black-1;
       position: absolute;
       top: 85%;
+      @include respond(phone) {
+        top: 80%;
+      }
     }
   }
 }

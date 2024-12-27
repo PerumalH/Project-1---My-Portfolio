@@ -1,5 +1,5 @@
 @import "../abstracts/variable";
-
+@import "../abstracts/mixins";
 .Me {
   display: flex;
   justify-content: center;
@@ -8,6 +8,9 @@
   color: $black-1;
   height: 50rem;
 
+  @include respond(phone) {
+    height: 41rem;
+  }
   &-Developer,
   &-Programmer {
     position: absolute;
@@ -35,17 +38,37 @@
       background-color: $black-1;
       padding: 1.5rem;
     }
+    @include respond(phone) {
+      &-1 {
+        font-size: 1rem;
+        width: 16rem;
+        margin-left: 9.5rem;
+      }
+      &-2 {
+        width: 32rem;
+        font-size: 1rem;
+        margin: 1rem;
+      }
+    }
   }
 
   &-Developer {
     top: 5%;
     left: 10%;
     width: 59rem;
+    @include respond(phone) {
+      top: 0%;
+      left: 4%;
+    }
   }
   &-Programmer {
     bottom: 5%;
     right: 10%;
     width: 59rem;
+    @include respond(phone) {
+      bottom: 0%;
+      right: -56%;
+    }
   }
 
   &-Motto-1,
@@ -67,19 +90,41 @@
 
   &-Motto-1 {
     top: 70%;
-    left: 20%;
-    box-shadow: $color-white 0px 0px 40px -11px;
+    left: 17%;
+    text-decoration: none;
+    border: 1px $rose-1 solid;
+    box-shadow: $rose-1 0px 0px 40px -10px;
+    width: 18rem;
     cursor: pointer;
+
+    @include respond(phone) {
+      top: 102%;
+      left: 30.5%;
+      width: 14rem;
+      font-size: 0.8rem;
+      height: 3.5rem;
+      box-shadow: none;
+      color: $black-1;
+      font-weight: bolder;
+      background-color: $color-white;
+      border: 1px $blue-3 solid;
+    }
+
     &:hover {
-      box-shadow: $green-0 0px 0px 40px -11px;
-      color: $green-0;
+      color: $black-1;
+      background-color: $color-white;
     }
   }
 
   &-Motto-2 {
     bottom: 65%;
     right: 20%;
+    @include respond(phone) {
+      bottom: 105%;
 
-    animation: blink 3s ease-in 1s infinite;
+      width: 25rem;
+      padding: 0%;
+      height: 3rem;
+    }
   }
 }

@@ -1,4 +1,6 @@
 @import "../abstracts/variable";
+@import "../abstracts/mixins";
+
 .project {
   position: relative;
   // border: 1px $purple-3 solid;
@@ -8,11 +10,22 @@
   height: 15rem;
   color: $color-white;
 
+  @include respond(phone) {
+    margin-top: 1.5rem;
+    width: 35rem;
+    height: 20rem;
+  }
+
   &-des {
     position: absolute;
     top: 5%;
     font-size: 1.2rem;
     padding: 1rem;
+    @include respond(phone) {
+      font-size: 0.9rem;
+      padding: 1.2rem;
+      text-align: left;
+    }
   }
   &-link {
     position: absolute;
@@ -24,6 +37,16 @@
     border-radius: 0.5rem;
     text-decoration: none;
     color: $black-1;
+    @include respond(phone) {
+      box-shadow: $color-white 0px 0px 40px -8px;
+      color: $color-white;
+      background-color: $black-1;
+      border: 1px $purple-3 solid;
+      bottom: 30%;
+      right: 5%;
+      font-size: 0.9rem;
+      width: 10rem;
+    }
     &:hover {
       box-shadow: $green-0 0px 0px 40px -5px;
       color: $color-white;
@@ -34,16 +57,25 @@
     position: absolute;
     bottom: 10%;
     display: flex;
+    flex-wrap: wrap;
     // font-family: "Avalanche";
     justify-content: space-around;
+
     width: 35rem;
     font-size: 1rem;
+    @include respond(phone) {
+      bottom: 10%;
+      width: 35rem;
+    }
     & p {
       background-color: $black-1;
       border: 1px $color-white solid;
       padding: 0.2rem;
       border-radius: 0.5rem;
       color: $green-0;
+      @include respond(phone) {
+        font-size: 0.8rem;
+      }
     }
   }
 }

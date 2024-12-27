@@ -20,8 +20,10 @@ const AboutMe = () => {
             }
           </p>
         </div>
-        <div className="Me-Motto-1">Download Resume</div>
-        <div className="Me-Motto-2">{"More Code Less Stress"}</div>
+        <a className="Me-Motto-1" href="/public/Perumal_H.pdf" download>
+          Download Resume
+        </a>
+        <div className="Me-Motto-2">{"More Code, Less Stress"}</div>
       </div>
     </Container>
   );
