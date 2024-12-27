@@ -68,15 +68,16 @@
     position: fixed;
     top: 90%;
     right: 10%;
-    width: 7rem;
+    width: 9rem;
     height: 3.4rem;
     font-size: 1.2rem;
     font-family: "BarmoFont";
     background-color: $black-1;
-    color: $green-0;
-    border: 1px $color-white solid;
+    color: $color-white;
+    border: 1px $blue-3 solid;
+    font-weight: bolder;
     border-radius: 0.4rem;
-    box-shadow: $green-0 0px 0px 40px -4px;
+    box-shadow: $blue-3 0px 0px 40px -0px;
   }
 
   @include respond(phone) {

@@ -1,4 +1,5 @@
 @import "../abstracts/variable";
+@import "../abstracts/mixins";
 
 .Details {
   color: $black-1;
@@ -13,6 +14,9 @@
   transition: all 2s ease-in-out;
   border: 1px $color-white solid;
   background-color: $color-white;
+  @include respond(phone) {
+    height: 6.5rem;
+  }
 
   &-full {
     padding-top: 12rem;
@@ -29,6 +33,16 @@
       color: $color-white;
     }
 
+    @include respond(phone) {
+      height: 35rem;
+      width: 25rem;
+      font-size: 1.3rem;
+      & .D2,
+      .D3,
+      .D1 {
+        padding: 0.5rem;
+      }
+    }
     // display: none;
   }
   &-action {
@@ -63,6 +77,10 @@
   background-color: transparent;
   width: 40rem;
   height: 25rem;
+  @include respond(phone) {
+    height: 23rem;
+    width: 30rem;
+  }
 }
 
 .hidden {

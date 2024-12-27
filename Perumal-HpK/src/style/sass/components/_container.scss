@@ -32,8 +32,8 @@
   transition: all 2s ease-in-out;
   animation: expand 2s ease-in-out;
   @include respond(phone) {
-    width: 100vw;
-    margin-right: 0rem;
+    width: 99vw;
+    margin-right: 1rem;
   }
 }
 

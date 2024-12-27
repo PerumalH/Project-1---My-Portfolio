@@ -44,7 +44,7 @@ const ExploreMe = () => {
       </NavLink>
 
       <button className="NavBarhidden NavBar" onClick={handleNavHidden}>
-        MENU
+        ListOf-ME
       </button>
     </div>
   );
