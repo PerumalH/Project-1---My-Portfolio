@@ -2,6 +2,7 @@ import "../style/sass/layout/_explore.scss";
 import NavLinkList from "../Components/NavLinkList";
 import { NavLink } from "react-router";
 import { useState } from "react";
+import { CiMenuBurger } from "react-icons/ci";
 
 const ExploreMe = () => {
   const navList = [
@@ -43,9 +44,7 @@ const ExploreMe = () => {
         Rediscover-ME
       </NavLink>
 
-      <button className="NavBarhidden NavBar" onClick={handleNavHidden}>
-        ListOf-ME
-      </button>
+      <CiMenuBurger className="NavBarhidden NavBar" onClick={handleNavHidden} />
     </div>
   );
 };
