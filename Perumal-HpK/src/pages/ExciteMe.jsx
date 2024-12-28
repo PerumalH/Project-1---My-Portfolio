@@ -2,13 +2,32 @@ import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import Container from "../Components/Container";
 import "../style/sass/pages/_exciteme.scss";
+import useSendTask from "../Hooks/useSendTask";
+import Loader from "../Components/Loader";
+import InfoBar from "../Components/InfoBar";
+import { useState } from "react";
 
 const ExciteMe = () => {
+  const { loading, SendTaskAPI } = useSendTask();
+  const [Message, setMessage] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const { register: register1, handleSubmit: handleSubmit1, reset } = useForm();
+
+  const onSubmitTask = async (data) => {
+    await SendTaskAPI(data);
+    reset();
+    setMessage(true);
+    const timer = setTimeout(() => {
+      setMessage(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  };
 
   const onSubmit = (data) => {
     emailjs
@@ -32,6 +51,9 @@ const ExciteMe = () => {
 
   return (
     <Container container={"Container-2"}>
+      {Message && <InfoBar classname={"Success"} Message={"I'M EXCITED!"} />}
+      {loading && <Loader />}
+
       <div className="exploreAgain">
         <p>{"I hope you got to "}</p>
         <a href="/explore-me">Explore-ME</a>
@@ -73,11 +95,11 @@ const ExciteMe = () => {
       </div>
       <div className="form2">
         <h2>Challenge-ME</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit1(onSubmitTask)}>
           <div>
             <label>Task Details -(Default and Clear)</label>
             <textarea
-              {...register("Task", { required: "*required" })}
+              {...register1("taskDetail", { required: "*required" })}
               placeholder="Provide a detailed task description"
             />
           </div>

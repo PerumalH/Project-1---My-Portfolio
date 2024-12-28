@@ -1,0 +1,32 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixins";
+
+.Success,
+.Warn {
+  position: fixed;
+  top: 5%;
+  width: 30rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $color-white;
+  background-color: $black-1;
+  border-radius: 0.5rem;
+  z-index: 3;
+  box-shadow: $color-white 0 0 40px -10px;
+  animation: glowInOut 0.4s ease-in-out infinite;
+  backdrop-filter: blur(5px);
+  @include respond(phone) {
+    width: 30rem;
+    height: 4.5rem;
+    font-size: 1rem;
+  }
+}
+.Warn {
+  border: 1px $red-1 solid;
+}
+.Success {
+  border: 1px $blue-3 solid;
+}
