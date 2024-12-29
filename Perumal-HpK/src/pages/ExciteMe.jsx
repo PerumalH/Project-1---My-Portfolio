@@ -1,58 +1,73 @@
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
+import emailjs from "emailjs-com/";
 import Container from "../Components/Container";
 import "../style/sass/pages/_exciteme.scss";
 import useSendTask from "../Hooks/useSendTask";
 import Loader from "../Components/Loader";
 import InfoBar from "../Components/InfoBar";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const ExciteMe = () => {
   const { loading, SendTaskAPI } = useSendTask();
+  const [loadingMail, setloadingMail] = useState(false);
+  const [error, setError] = useState(false);
   const [Message, setMessage] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset: reset1 } = useForm();
 
   const { register: register1, handleSubmit: handleSubmit1, reset } = useForm();
-
+  const EmailForm = useRef();
   const onSubmitTask = async (data) => {
     await SendTaskAPI(data);
     reset();
     setMessage(true);
     const timer = setTimeout(() => {
       setMessage(false);
-    }, 1500);
+    }, 2500);
 
     return () => clearTimeout(timer);
   };
 
-  const onSubmit = (data) => {
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID", // Your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Your EmailJS template ID
-        data, // Form data
-        "YOUR_USER_ID" // Your EmailJS user ID
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          alert("Message Sent Successfully");
-        },
-        (error) => {
-          console.log(error);
-          alert("Message Not Sent. Try Again Later");
-        }
+  const onSubmit = async () => {
+    try {
+      setloadingMail(true);
+      const response = await emailjs.sendForm(
+        "service_392yfvb",
+        "template_hatptk5",
+        EmailForm.current,
+        "87fL3oiKzwgOi8kWh"
       );
+
+      if (response.status) {
+        setMessage(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      reset1();
+      setloadingMail(false);
+    }
+
+    const timer = setTimeout(() => {
+      setMessage(false);
+      setError(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
   };
 
   return (
     <Container container={"Container-2"}>
-      {Message && <InfoBar classname={"Success"} Message={"I'M EXCITED!"} />}
-      {loading && <Loader />}
+      {(Message || error) && (
+        <InfoBar
+          classname={error ? "Warn" : "Success"}
+          Message={
+            error
+              ? "OOPS! - SOMETHING WENT WRONG!"
+              : "I'M EXCITED, I'll CATCH YOU SOON!"
+          }
+        />
+      )}
+      {(loading || loadingMail) && <Loader />}
 
       <div className="exploreAgain">
         <p>{"I hope you got to "}</p>
@@ -63,13 +78,13 @@ const ExciteMe = () => {
       </div>
       <div className="form1">
         <h2>Contact-ME</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form ref={EmailForm} onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label htmlFor="email">Email</label>
             <input
               id="email"
               type="email"
-              {...register("email", {
+              {...register("from_email", {
                 required: "*required",
                 pattern: {
                   value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
@@ -84,7 +99,7 @@ const ExciteMe = () => {
               Message
             </label>
             <textarea
-              placeholder="Compose Your Email"
+              placeholder="Compose your message here, and don’t forget to include your name!"
               id="message"
               {...register("message", { required: "*required" })}
             />
