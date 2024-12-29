@@ -1,8 +1,8 @@
-import logo from "../assets/React+Html.png";
+import logo from "/public/React+Html.png";
 import "../style/sass/layout/_home.scss";
 import Tilt from "react-parallax-tilt";
 
-import HiImg from "../assets/hi-unscreen.gif";
+import HiImg from "/public/hi-unscreen.gif";
 import { NavLink } from "react-router";
 const Home = () => {
   return (
