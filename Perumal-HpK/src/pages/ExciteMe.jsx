@@ -6,6 +6,7 @@ import useSendTask from "../Hooks/useSendTask";
 import Loader from "../Components/Loader";
 import InfoBar from "../Components/InfoBar";
 import { useRef, useState } from "react";
+import { Link } from "react-router";
 
 const ExciteMe = () => {
   const { loading, SendTaskAPI } = useSendTask();
@@ -71,10 +72,10 @@ const ExciteMe = () => {
 
       <div className="exploreAgain">
         <p>{"I hope you got to "}</p>
-        <a href="/explore-me">Explore-ME</a>
+        <Link to={"/explore-me"}>Explore-ME</Link>
       </div>
       <div className="rediscover">
-        <a href="/">Rediscover-ME</a>
+        <Link to={"/"}>Rediscover-ME</Link>
       </div>
       <div className="form1">
         <h2>Contact-ME</h2>
