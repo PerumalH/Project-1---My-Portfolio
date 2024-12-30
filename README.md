@@ -1,3 +1,8 @@
+🌟 Current Focus
+I'm currently working on optimizing performance in my projects to ensure faster load times and smoother user experiences.
+
+
+
 Project 1: Portfolio
 
 Overview: 
