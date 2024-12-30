@@ -63,7 +63,7 @@ function App() {
     <Container key={0} container={"Container"}>
       <RouterProvider router={router}></RouterProvider>
     </Container>,
-    <video key={1} autoPlay muted loop id="background-video">
+    <video key={1} autoPlay muted loop preload="metadata" id="background-video">
       <source src={videoClip} type="video/mp4" />
     </video>,
   ];
