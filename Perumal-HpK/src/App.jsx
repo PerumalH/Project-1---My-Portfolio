@@ -28,6 +28,7 @@ function App() {
         {
           path: "explore-me",
           element: <RootExploreMe />,
+          errorElement: <ErrorPage />,
           children: [
             { path: "About-Me", index: true, element: <AboutMe /> },
             {
@@ -64,7 +65,7 @@ function App() {
       <RouterProvider router={router}></RouterProvider>
     </Container>,
     <video key={1} autoPlay muted loop preload="metadata" id="background-video">
-      <source src={videoClip} type="video/mp4" />
+      <source src={videoClip} type="video/webm" />
     </video>,
   ];
 }
