@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import "./style/sass/pages/_app.scss";
 import Container from "./Components/Container";
 import videoClip from "../public/Background-Video.webm";
+import videoClip1 from "../public/Background-Video-phone.mp4";
 import Root from "./pages/Root";
 import RootExploreMe from "./pages/RootExploreMe";
 import AboutMe from "./pages/AboutMe";
@@ -64,7 +65,8 @@ function App() {
     <Container key={0} container={"Container"}>
       <RouterProvider router={router}></RouterProvider>
     </Container>,
-    <video key={1} autoPlay muted loop preload="metadata" id="background-video">
+    <video key={1} autoPlay muted loop loading="lazy" id="background-video">
+      <source src={videoClip1} type="video/mp4" media="(max-width: 600px)" />
       <source src={videoClip} type="video/webm" />
     </video>,
   ];
