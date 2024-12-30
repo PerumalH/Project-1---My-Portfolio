@@ -1,5 +1,7 @@
 import Container from "../Components/Container";
 import ProjectsDetails from "../Components/ProjectsDetails";
+import github from "/public/github.png";
+
 import "../style/sass/pages/_project.scss";
 const Project = () => {
   const project = [
@@ -21,11 +23,7 @@ const Project = () => {
             }
           </p> */}
           <div className="github">
-            <img
-              src="/public/github.png"
-              alt="github"
-              className="github-logo"
-            />
+            <img src={github} alt="github" className="github-logo" />
             <a
               className="github-action"
               href="https://github.com/PerumalH"
