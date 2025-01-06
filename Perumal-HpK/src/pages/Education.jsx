@@ -11,7 +11,7 @@ const Education = () => {
       BtnName: "B.E CSE",
       DetailsOf: {
         Detail1: "SNS College Of Technology, Coimbatore.",
-        Detail3: "8.89 CGPA",
+        Detail3: "8.89 CGPA <--> [2018 - 22]",
       },
     },
     {
@@ -19,7 +19,7 @@ const Education = () => {
       DetailsOf: {
         Detail1: "The Little Flower Hr.Sec School, Kumbakonam.",
 
-        Detail3: "82 %",
+        Detail3: "82 % <--> [2017 - 18]",
       },
     },
     {
@@ -27,7 +27,7 @@ const Education = () => {
       DetailsOf: {
         Detail1: "Minerva Hr.Sec School, Kadichambadi.",
 
-        Detail3: "92 %",
+        Detail3: "92 % <--> [2015-16]",
       },
     },
   ];

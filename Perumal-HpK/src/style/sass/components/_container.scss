@@ -54,6 +54,10 @@
   // border: 1px $red-1 solid;
   box-shadow: $blue-3 0px 0px 40px -11px;
   overflow: auto;
+  @include respond(phone) {
+    width: 90vw;
+    height: 25vh;
+  }
 }
 
 .Container-2 {
